@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akror's Gyping Game</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav nav-white">
+        <button class="close-button" id="close-button">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="nav nav-red">
+          <div class="nav nav-yellow">
+            <h1>
+              <a href="https://github.com/AkhrorSoliev">
+                AkhrorSoliev
+                <i class="fab fa-github"></i>
+              </a>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="wrapper">
+      <p class="footer">
+        <a href="https://github.com/AkhrorSoliev">
+          <i class="fas fa-external-link-alt"></i>
+          AkhrorSoliev
+        </a>
+        &copy All Rights Reserved
+      </p>
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="shape4"></div>
+      <div class="inner-wrapper">
+        <header>
+          <button class="menu-bar" id="menu-bar">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="select">
+            <select id="select">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <h3>
+            Score:
+            <span class="score" id="score">0</span>
+          </h3>
+        </header>
+
+        <div class="text-container">
+          <span class="word" id="word"></span>
+          <input type="text" id="word-input" class="word-input" />
+        </div>
+        <div class="time-conatiner" id="time-container">
+          <div class="progress" id="progress">
+            <h1>
+              Time:
+              <span id="time">10s</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal hidden" id="modal">
+      <h1>Time Over !</h1>
+      <h3>Your Score:</h3>
+      <span id="lastScore" class="lastScore">0</span>
+      <button onclick="location.reload()">Again</button>
+    </div>
+
+    <div class="overlay hidden" id="overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>

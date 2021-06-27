@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 20;
+  height: 100%;
+  max-width: 400px;
+  transition: transform 1s ease-in;
+  transform: translateX(-100%);
+}
+
+.nav.active {
+  transform: translateX(-2%);
+}
+
+.close-button {
+  position: absolute;
+  top: 5rem;
+  right: 6rem;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.192);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.5s, color 0.5s;
+  z-index: 30;
+  padding: 0.7rem;
+}
+
+.close-button:hover {
+  transform: rotate(180deg);
+  color: red;
+}
+
+.nav-white {
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 30px 30px 0 0;
+  -webkit-box-shadow: 0px -34px 30px 20px rgba(34, 60, 80, 0.4);
+  -moz-box-shadow: 0px -34px 30px 20px rgba(34, 60, 80, 0.4);
+  box-shadow: 0px -34px 30px 20px rgba(34, 60, 80, 0.4);
+  transition: transform 1s;
+}
+
+.nav.action .nav-white {
+  transition-delay: 0;
+}
+
+.nav-red {
+  width: 390px;
+  background: rgb(226, 67, 67);
+  position: absolute;
+  bottom: 0;
+  right: auto;
+  border-radius: 30px 30px 0 0;
+  -webkit-box-shadow: 0px -20px 50px 5px rgba(80, 36, 34, 0.35);
+  -moz-box-shadow: 0px -20px 50px 5px rgba(80, 36, 34, 0.35);
+  box-shadow: 0px -20px 50px 5px rgba(80, 36, 34, 0.35);
+  transition: transform 0.3s;
+}
+
+.nav.action .nav-red {
+  transition-delay: 0.5s;
+}
+
+.nav-yellow {
+  width: 380px;
+  background-color: rgba(241, 208, 20, 0.842);
+  position: absolute;
+  bottom: 0;
+  border-radius: 30px 30px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px -20px 50px 5px rgba(176, 167, 45, 0.35);
+  -moz-box-shadow: 0px -20px 50px 5px rgba(176, 167, 45, 0.35);
+  box-shadow: 0px -20px 50px 5px rgba(176, 167, 45, 0.35);
+  transition: transform 1s;
+}
+
+.nav-yellow h1 a {
+  text-decoration: none;
+  color: rgb(255, 47, 47);
+}
+
+.nav-yellow h1 {
+  transition: transform 0.5s;
+}
+
+.nav-yellow h1:hover {
+  transform: scale(1.1);
+  color: rgb(226, 67, 67);
+}
+
+.nav.action .nav-yellow {
+  transition-delay: 0.5s;
+}
+
+.wrapper {
+  background: #340d9b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.inner-wrapper {
+  position: absolute;
+  background-color: #290a76;
+  height: 80vh;
+  width: 90%;
+  padding: 0 5rem;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  font-size: 1.5rem;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  max-width: 20rem;
+  height: 40vh;
+  margin: 1rem auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.word {
+  font-size: 2rem;
+}
+
+.word-input {
+  height: 3rem;
+  width: calc(100% - 20px);
+  margin: auto;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.shape1 {
+  height: 10rem;
+  width: 10rem;
+  clip-path: circle(50% at 0 96%);
+  background-color: rgba(0, 255, 255, 0.397);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.shape2 {
+  height: 10rem;
+  width: 10rem;
+  background-color: rgba(165, 42, 42, 0.603);
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  transform: rotate(45deg);
+}
+
+.shape3 {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  background-color: rgba(128, 255, 0, 0.534);
+  top: -10px;
+  right: 0;
+}
+
+.shape4 {
+  height: 10rem;
+  width: 10rem;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 217, 0, 0.651);
+}
+
+.menu-bar {
+  background: rgba(0, 0, 0, 0.192);
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.5s, color 0.5s;
+}
+
+.menu-bar:hover {
+  transform: rotate(180deg);
+  color: aqua;
+}
+
+select {
+  width: 15rem;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding: 1rem;
+  font-size: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Varela Round', sans-serif;
+  color: rgb(226, 67, 67);
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.select {
+  position: relative;
+}
+
+.select::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '\25BC';
+  background: #5c8e48;
+  padding: 0.8rem;
+  cursor: pointer;
+  pointer-events: none;
+  border-radius: 0 10px 10px 0;
+  bottom: 0;
+}
+
+.time-conatiner {
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 50;
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  line-height: 2;
+  border-radius: 30px;
+}
+
+.modal button {
+  display: block;
+  width: 30%;
+  margin: 1rem auto;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Varela Round', sans-serif;
+  background: gold;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.lastScore {
+  font-size: 4rem;
+  color: #290a76;
+  font-weight: bold;
+}
+
+.modal button {
+  font-size: 1.1rem;
+}
+
+.modal h1 {
+  margin: 0;
+  color: rgb(32, 202, 165);
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  position: absolute;
+  z-index: 1000;
+  bottom: 15px;
+}
+
+.footer a {
+  color: #fff;
+}
