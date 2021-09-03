@@ -3,4 +3,5 @@ In this program you can check your typing speed on the keyboard. The words in th
 
 # Connect
 
+Teleram: https://t.me/akhror_web
 
